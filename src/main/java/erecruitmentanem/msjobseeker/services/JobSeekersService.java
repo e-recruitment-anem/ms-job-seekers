@@ -1,15 +1,11 @@
 package erecruitmentanem.msjobseeker.services;
-
-import java.util.Map;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.batch.BatchProperties.Job;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
 import erecruitmentanem.msjobseeker.DTOs.CreateJobSeeker;
 import erecruitmentanem.msjobseeker.DTOs.JobSeekerDto;
+import erecruitmentanem.msjobseeker.DTOs.JobSeekerLanguagesDto;
+import erecruitmentanem.msjobseeker.DTOs.JobSeekerSkillsDto;
 import erecruitmentanem.msjobseeker.entities.JobSeeker;
 import erecruitmentanem.msjobseeker.helpers.ExceptionsHandler;
 import erecruitmentanem.msjobseeker.helpers.ResponseHandler;
@@ -80,4 +76,28 @@ public class JobSeekersService {
         jobSeekersRepository.save(jobSeeker);
         return ResponseHandler.generateResponse("item updated successfully.", jobSeeker);
     }
+
+    public ResponseEntity<Object> updateJobSeekerSkillsById(Long id ,JobSeekerSkillsDto body){
+        if(jobSeekersRepository.existsById(id) == false){
+            return ExceptionsHandler.itemNotFoundException();   
+        }
+        JobSeeker jobSeeker = jobSeekersRepository.findById(id).get();
+        jobSeeker.setSkills(body.getSkills());
+        jobSeekersRepository.save(jobSeeker);
+        return ResponseHandler.generateResponse("job seeker skills updatedSuccessfully.", jobSeeker.getSkills());
+        
+    }
+
+    public ResponseEntity<Object> updateJobSeekerLanguagesById(Long id ,JobSeekerLanguagesDto body){
+        if(jobSeekersRepository.existsById(id) == false){
+            return ExceptionsHandler.itemNotFoundException();   
+        }
+        JobSeeker jobSeeker = jobSeekersRepository.findById(id).get();
+        jobSeeker.setLanguages(body.getLanguages());
+        jobSeekersRepository.save(jobSeeker);
+        return ResponseHandler.generateResponse("job seeker languages updatedSuccessfully.", jobSeeker.getLanguages());
+        
+    }
+
+
 }
