@@ -1,6 +1,5 @@
 package erecruitmentanem.msjobseeker.entities;
 
-import javax.persistence.*;
 
 import erecruitmentanem.msjobseeker.enums.*;
 import lombok.AllArgsConstructor;
@@ -9,6 +8,11 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -16,7 +20,6 @@ import java.util.Date;
 public class JobSeeker {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idJobSeeker ;
 
     private String firstName ;
