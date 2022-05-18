@@ -1,12 +1,15 @@
 package erecruitmentanem.msjobseeker.services;
 
+import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.batch.BatchProperties.Job;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import erecruitmentanem.msjobseeker.DTOs.CreateJobSeeker;
+import erecruitmentanem.msjobseeker.DTOs.JobSeekerDto;
 import erecruitmentanem.msjobseeker.entities.JobSeeker;
 import erecruitmentanem.msjobseeker.helpers.ExceptionsHandler;
 import erecruitmentanem.msjobseeker.helpers.ResponseHandler;
@@ -17,11 +20,7 @@ public class JobSeekersService {
     @Autowired(required = false)
     JobSeekersRepository jobSeekersRepository;
 
-    @Autowired(required = false)
-    ResponseHandler responseHandler;
-
-    @Autowired(required = false)
-    ExceptionsHandler exceptionsHandler;
+  
 
     public ResponseEntity<Object> createJobSeeker(CreateJobSeeker body){
         try {
@@ -40,18 +39,45 @@ public class JobSeekersService {
         jobSeekersRepository.save(jobSeeker);
         return ResponseHandler.generateResponse("message", jobSeeker);
         } catch (Exception e) {
-           return exceptionsHandler.badRequestException();
+           return ExceptionsHandler.badRequestException();
         }
     }
 
     public ResponseEntity<Object> getJobSeekerById(Long id){
             if(jobSeekersRepository.existsById(id) == false){
-                return exceptionsHandler.itemNotFoundException();   
+                return ExceptionsHandler.itemNotFoundException();   
             }
             JobSeeker jobSeeker = jobSeekersRepository.findById(id).get();
-            return responseHandler.generateResponse("job seeker found.", jobSeeker);   
-       
+            return ResponseHandler.generateResponse("job seeker found.", jobSeeker);   
         }
 
-
+    public ResponseEntity<Object> updateJobSeekerById(Long id ,JobSeekerDto body){
+        if(jobSeekersRepository.existsById(id) == false){
+            return ExceptionsHandler.itemNotFoundException();   
+        }
+        JobSeeker jobSeeker = jobSeekersRepository.findById(id).get();
+        jobSeeker.setFirstName(body.getFirstName());
+        jobSeeker.setLastName(body.getLastName());
+        jobSeeker.setGender(body.getGender());
+        jobSeeker.setBirthDate(body.getBirthDate());
+        jobSeeker.setBirthPlace(body.getBirthPlace());
+        jobSeeker.setAddress(body.getAddress());
+        jobSeeker.setPostalCode(body.getPostalCode());
+        jobSeeker.setResidenceCity(body.getResidenceCity());
+        jobSeeker.setNationality(body.getNationality());
+        jobSeeker.setPhoneNumber(body.getPhoneNumber());
+        jobSeeker.setEducationalLevel(body.getEducationalLevel());
+        jobSeeker.setQualificationLevel(body.getQualificationLevel());
+        jobSeeker.setIdentityCardType(body.getIdentityCardType());
+        jobSeeker.setIdentityCardNumber(body.getIdentityCardNumber());
+        jobSeeker.setIdentityCardDelivryCity(body.getIdentityCardDelivryCity());
+        jobSeeker.setIdentityCardDelivryDate(body.getIdentityCardDelivryDate());
+        jobSeeker.setMilltarySituation(body.getMilltarySituation());
+        jobSeeker.setFamilySituation(body.getFamilySituation());
+        jobSeeker.setChildren(body.getChildren());
+        jobSeeker.setMinSalary(body.getMinSalary());
+        jobSeeker.setDisability(body.getDisability());
+        jobSeekersRepository.save(jobSeeker);
+        return ResponseHandler.generateResponse("item updated successfully.", jobSeeker);
+    }
 }

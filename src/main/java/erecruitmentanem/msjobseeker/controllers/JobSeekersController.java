@@ -1,5 +1,6 @@
 package erecruitmentanem.msjobseeker.controllers;
 import erecruitmentanem.msjobseeker.DTOs.CreateJobSeeker;
+import erecruitmentanem.msjobseeker.DTOs.JobSeekerDto;
 import erecruitmentanem.msjobseeker.entities.JobSeeker;
 import erecruitmentanem.msjobseeker.helpers.ResponseHandler;
 import erecruitmentanem.msjobseeker.repositories.JobSeekersRepository;
@@ -24,6 +25,11 @@ public class JobSeekersController {
     @GetMapping("{id}")
     ResponseEntity<Object> getJobSeeker(@PathVariable("id") Long id){   
         return jobSeekersService.getJobSeekerById(id);
+    }
+
+    @PutMapping("{id}")
+    ResponseEntity<Object> updateJobSeeker(@PathVariable("id") Long id , @RequestBody JobSeekerDto body){   
+        return jobSeekersService.updateJobSeekerById(id , body);
     }
 
 

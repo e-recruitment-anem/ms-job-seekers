@@ -4,7 +4,7 @@ import org.springframework.http.ResponseEntity;
 
 public abstract class ExceptionsHandler {
 
-    public ResponseEntity<Object> notAuthorizedExceptions(){
+    public static ResponseEntity<Object> notAuthorizedExceptions(){
         return ResponseHandler.generateErrorResponse(
             HttpStatus.BAD_REQUEST ,
              "NotAuthorizedExceptions", 
@@ -12,7 +12,7 @@ public abstract class ExceptionsHandler {
              );
     }
 
-    public ResponseEntity<Object> notAuthenticatedException(){
+    public static ResponseEntity<Object> notAuthenticatedException(){
         return ResponseHandler.generateErrorResponse(
             HttpStatus.BAD_REQUEST , 
             "NotAuthenticatedException", 
@@ -29,7 +29,7 @@ public abstract class ExceptionsHandler {
             );
     }
 
-    public ResponseEntity<Object> badRequestException(){
+    public static ResponseEntity<Object> badRequestException(){
         return ResponseHandler.generateErrorResponse(
             HttpStatus.BAD_REQUEST , 
             "BadRequestException", 
