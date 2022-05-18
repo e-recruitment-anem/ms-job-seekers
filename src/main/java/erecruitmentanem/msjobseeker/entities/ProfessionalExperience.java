@@ -11,12 +11,11 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "proffesionalExperiences")
-public class ProffesionalExperience {
-
+@Table(name = "professionalExperiences")
+public class ProfessionalExperience {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idProfExperinece ;
+    private Long idProfessionalExperinece ;
     private Date startDate ;
     private Date endDate ;
     private Long idJobTitle ;

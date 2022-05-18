@@ -1,6 +1,5 @@
 package erecruitmentanem.msjobseeker.entities;
 
-import javax.persistence.*;
 
 import erecruitmentanem.msjobseeker.enums.*;
 import lombok.AllArgsConstructor;
@@ -9,6 +8,8 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 import java.util.Set;
+
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -66,7 +67,7 @@ public class JobSeeker {
 
     @OneToMany(mappedBy = "jobSeeker", fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
-    private Set<ProffesionalExperience> proffesionalExperience;
+    private Set<ProfessionalExperience> proffesionalExperience;
 
     @OneToMany(mappedBy = "jobSeeker", fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)

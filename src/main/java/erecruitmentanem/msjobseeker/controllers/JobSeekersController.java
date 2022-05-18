@@ -1,54 +1,44 @@
 package erecruitmentanem.msjobseeker.controllers;
-
-
-import erecruitmentanem.msjobseeker.entities.JobSeeker;
-import erecruitmentanem.msjobseeker.repositories.JobSeekersRepository;
+import erecruitmentanem.msjobseeker.DTOs.CreateJobSeeker;
+import erecruitmentanem.msjobseeker.DTOs.JobSeekerDto;
+import erecruitmentanem.msjobseeker.DTOs.JobSeekerLanguagesDto;
+import erecruitmentanem.msjobseeker.DTOs.JobSeekerSkillsDto;
+import erecruitmentanem.msjobseeker.services.JobSeekersService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api")
 public class JobSeekersController {
 
 
-    @Autowired
-    JobSeekersRepository jobSeekersRepository ;
+  @Autowired(required = false)
+  JobSeekersService jobSeekersService;
 
-    @PostMapping("/create/{id}")
-    JobSeeker createJobSeeker(@PathVariable("id") Long idf)
-    {
-        JobSeeker jobseeker = jobSeekersRepository.save(new JobSeeker());
-        return jobseeker;
+    @PostMapping
+    ResponseEntity<Object> createJobSeeker(@RequestBody CreateJobSeeker body){   
+        return jobSeekersService.createJobSeeker(body);
     }
 
-    @GetMapping("/{id}")
-    String getJobSeekerById(@PathVariable("id") Long idf)
-    {
-        return idf.toString();
+    @GetMapping("{id}")
+    ResponseEntity<Object> getJobSeeker(@PathVariable("id") Long id){   
+        return jobSeekersService.getJobSeekerById(id);
     }
 
-    @GetMapping("/show/{id}")
-    String getJobSeekers(@PathVariable("id") Long idf)
-    {
-        return idf.toString();
+    @PutMapping("{id}")
+    ResponseEntity<Object> updateJobSeeker(@PathVariable("id") Long id , @RequestBody JobSeekerDto body){   
+        return jobSeekersService.updateJobSeekerById(id , body);
     }
 
-    @PutMapping("/update/{id}")
-    String updateJobSeekers(@PathVariable("id") Long idf)
-    {
-        return idf.toString();
+    @PatchMapping("{id}/skills")
+    ResponseEntity<Object> updateJobSeekerSkills(@PathVariable("id") Long id , @RequestBody JobSeekerSkillsDto body){   
+        return jobSeekersService.updateJobSeekerSkillsById(id , body);
     }
 
-    @DeleteMapping("/delete/{id}")
-    String deleteJobSeekers(@PathVariable("id") Long idf)
-    {
-        return idf.toString();
+    @PatchMapping("{id}/languages")
+    ResponseEntity<Object> updateJobSeekerLanguages(@PathVariable("id") Long id , @RequestBody JobSeekerLanguagesDto body){   
+        return jobSeekersService.updateJobSeekerLanguagesById(id , body);
     }
 
-    @PatchMapping("/patch/{id}")
-    String updateSkills(@PathVariable("id") Long idf)
-    {
-        return idf.toString();
-    }
 
 }

@@ -1,8 +1,8 @@
 package erecruitmentanem.msjobseeker.repositories;
 
-import erecruitmentanem.msjobseeker.entities.ProffesionalExperience;
+import erecruitmentanem.msjobseeker.entities.ProfessionalExperience;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ProffesionalExpRepository
-        extends JpaRepository<ProffesionalExperience,Long> {
+        extends JpaRepository<ProfessionalExperience,Long> {
 }
