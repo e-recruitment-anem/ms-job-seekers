@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  ms-random:
+    image: random
+    container_name: random
+    restart: always
+    ports:
+      - "8090:8090"

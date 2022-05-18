@@ -7,6 +7,9 @@ import erecruitmentanem.msjobseeker.services.JobSeekersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 public class JobSeekersController {
@@ -14,6 +17,12 @@ public class JobSeekersController {
 
   @Autowired(required = false)
   JobSeekersService jobSeekersService;
+
+    @GetMapping(value="hello")
+    public String getMethodName() {
+        return "new SomeData()";
+    }
+    
 
     @PostMapping
     ResponseEntity<Object> createJobSeeker(@RequestBody CreateJobSeeker body){   
