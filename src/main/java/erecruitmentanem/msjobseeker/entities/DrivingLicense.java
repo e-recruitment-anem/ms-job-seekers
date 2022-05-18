@@ -21,4 +21,8 @@ public class DrivingLicense {
 
     private Date deliveryDate ;
     private Date category ;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "idJobSeeker", nullable = false)
+    private JobSeeker jobSeeker;
 }

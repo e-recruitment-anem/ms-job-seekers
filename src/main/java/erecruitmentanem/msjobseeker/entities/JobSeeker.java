@@ -63,4 +63,12 @@ public class JobSeeker {
     @OneToMany(mappedBy = "jobSeeker", fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
     private Set<JobRequest> jobRequest;
+
+    @OneToMany(mappedBy = "jobSeeker", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    private Set<ProffesionalExperience> proffesionalExperience;
+
+    @OneToMany(mappedBy = "jobSeeker", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    private Set<DrivingLicense> drivingLicense;
 }

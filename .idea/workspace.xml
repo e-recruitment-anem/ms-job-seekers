@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c088690-409e-48d5-840c-ebb165bd1583" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/DrivingLicense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/DrivingLicense.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/JobRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/JobRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/JobSeeker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/JobSeeker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/ProffesionalExperience.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/ProffesionalExperience.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +107,7 @@
       <workItem from="1652794238297" duration="6380000" />
       <workItem from="1652820489015" duration="2031000" />
       <workItem from="1652868730831" duration="6301000" />
-      <workItem from="1652901295278" duration="1986000" />
+      <workItem from="1652901295278" duration="2306000" />
     </task>
     <servers />
   </component>

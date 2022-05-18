@@ -4,16 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "proffesionalExperiences")
 public class ProffesionalExperience {
 
     @Id
@@ -23,5 +21,9 @@ public class ProffesionalExperience {
     private Date endDate ;
     private Long idJobTitle ;
     private String description ;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "idJobSeeker", nullable = false)
+    private JobSeeker jobSeeker;
 
 }
