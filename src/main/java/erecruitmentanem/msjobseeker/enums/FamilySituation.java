@@ -1,2 +1,5 @@
-package erecruitmentanem.msjobseeker.enums;public enum familySituation {
+package erecruitmentanem.msjobseeker.enums;
+
+public enum FamilySituation {
+    SINGLE, MARRIED, DIVORCED, WIDOWER
 }

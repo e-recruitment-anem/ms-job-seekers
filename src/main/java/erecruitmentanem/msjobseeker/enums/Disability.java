@@ -1,5 +1,5 @@
 package erecruitmentanem.msjobseeker.enums;
 
-public enum Disibility {
+public enum Disability {
     DEAF_MUTE, BLIND, MOTOR, MENTAL
 }

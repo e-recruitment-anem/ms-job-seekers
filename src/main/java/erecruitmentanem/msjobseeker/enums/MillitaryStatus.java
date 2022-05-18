@@ -1,2 +1,4 @@
-package erecruitmentanem.msjobseeker.enums;public enum MillitaryStatus {
+package erecruitmentanem.msjobseeker.enums;
+
+public enum MillitaryStatus {
 }

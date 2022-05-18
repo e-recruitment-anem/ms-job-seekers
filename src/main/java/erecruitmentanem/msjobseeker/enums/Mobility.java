@@ -1,2 +1,4 @@
-package erecruitmentanem.msjobseeker.enums;public enum Mobility {
+package erecruitmentanem.msjobseeker.enums;
+
+public enum Mobility {
 }
