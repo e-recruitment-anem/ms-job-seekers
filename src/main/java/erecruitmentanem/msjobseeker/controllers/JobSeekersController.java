@@ -14,7 +14,7 @@ public class JobSeekersController {
     @Autowired
     JobSeekersRepository jobSeekersRepository ;
 
-    @PostMapping("/")
+    @PostMapping("/create/{id}")
     JobSeeker createJobSeeker(@PathVariable("id") Long idf)
     {
         JobSeeker jobseeker = jobSeekersRepository.save(new JobSeeker());
