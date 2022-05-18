@@ -1,23 +1,19 @@
 package erecruitmentanem.msjobseeker.helpers;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-public class ExceptionsHandler {
-    @Autowired
-    ResponseHandler responseHandler;
+public abstract class ExceptionsHandler {
 
-    ResponseEntity<Object> notAuthorizedExceptions(){
-        return responseHandler.generateErrorResponse(
+    public ResponseEntity<Object> notAuthorizedExceptions(){
+        return ResponseHandler.generateErrorResponse(
             HttpStatus.BAD_REQUEST ,
              "NotAuthorizedExceptions", 
              "message"
              );
     }
 
-    ResponseEntity<Object> notAuthenticatedException(){
-        return responseHandler.generateErrorResponse(
+    public ResponseEntity<Object> notAuthenticatedException(){
+        return ResponseHandler.generateErrorResponse(
             HttpStatus.BAD_REQUEST , 
             "NotAuthenticatedException", 
             "message"
@@ -25,17 +21,16 @@ public class ExceptionsHandler {
 
     }
 
-    ResponseEntity<Object> itemNotFoundException(){
-        return responseHandler.generateErrorResponse(
+    public static ResponseEntity<Object> itemNotFoundException(){
+        return ResponseHandler.generateErrorResponse(
             HttpStatus.BAD_REQUEST , 
             "ItemNotFoundException", 
             "message"
             );
-
     }
 
-    ResponseEntity<Object> badRequestException(){
-        return responseHandler.generateErrorResponse(
+    public ResponseEntity<Object> badRequestException(){
+        return ResponseHandler.generateErrorResponse(
             HttpStatus.BAD_REQUEST , 
             "BadRequestException", 
             "message"

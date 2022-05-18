@@ -3,6 +3,8 @@ import erecruitmentanem.msjobseeker.DTOs.CreateJobSeeker;
 import erecruitmentanem.msjobseeker.entities.JobSeeker;
 import erecruitmentanem.msjobseeker.helpers.ResponseHandler;
 import erecruitmentanem.msjobseeker.repositories.JobSeekersRepository;
+import erecruitmentanem.msjobseeker.services.JobSeekersService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,27 +13,17 @@ import org.springframework.web.bind.annotation.*;
 public class JobSeekersController {
 
 
-    @Autowired
-    JobSeekersRepository jobSeekersRepository ;
+  @Autowired(required = false)
+  JobSeekersService jobSeekersService;
 
     @PostMapping
     ResponseEntity<Object> createJobSeeker(@RequestBody CreateJobSeeker body){   
-        JobSeeker jobSeeker = new JobSeeker();
-        jobSeeker.setIdJobSeeker(body.getIdJobSeeker());
-        jobSeeker.setFirstName(body.getFirstName());
-        jobSeeker.setLastName(body.getLastName());
-        jobSeeker.setGender(body.getGender());
-        jobSeeker.setBirthDate(body.getBirthDate());
-        jobSeeker.setBirthPlace(body.getBirthPlace());
-        jobSeeker.setAddress(body.getAddress());
-        jobSeeker.setPostalCode(body.getPostalCode());
-        jobSeeker.setResidenceCity(body.getResidenceCity());
-        jobSeeker.setNationality(body.getNationality());
-        jobSeeker.setPhoneNumber(body.getPhoneNumber());
-        jobSeekersRepository.save(jobSeeker);
-        return ResponseHandler.generateResponse("message", jobSeeker);
-        
- 
+        return jobSeekersService.createJobSeeker(body);
+    }
+
+    @GetMapping("{id}")
+    ResponseEntity<Object> getJobSeeker(@PathVariable("id") Long id){   
+        return jobSeekersService.getJobSeekerById(id);
     }
 
 
