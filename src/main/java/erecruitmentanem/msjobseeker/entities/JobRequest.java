@@ -13,11 +13,13 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "jobRequests")
 public class JobRequest {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idJobRequest ;
+    @Column(name = "idJobRequest")
+    private Long idJobSeeker ;
 
     private Number agency ;
     private Number admin ;
@@ -38,5 +40,7 @@ public class JobRequest {
     @Enumerated(EnumType.STRING)
     private JobRequestStatus status ;
 
-
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "idJobSeeker", nullable = false)
+    private JobSeeker jobSeeker;
 }

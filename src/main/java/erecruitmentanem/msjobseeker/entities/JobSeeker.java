@@ -8,15 +8,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "jobSeekers")
 public class JobSeeker {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idJobSeeker")
     private Long idJobSeeker ;
 
     private String firstName ;
@@ -56,4 +59,8 @@ public class JobSeeker {
     @Enumerated(EnumType.STRING)
     private Disability disability ;
 
+
+    @OneToMany(mappedBy = "jobSeeker", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    private Set<JobRequest> jobRequest;
 }
