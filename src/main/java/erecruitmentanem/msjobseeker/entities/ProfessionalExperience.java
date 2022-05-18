@@ -14,11 +14,11 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProffesionalExperience {
+public class ProfessionalExperience {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idProfExperinece ;
+    private Long idProfessionalExperinece ;
     private Date startDate ;
     private Date endDate ;
     private Long idJobTitle ;

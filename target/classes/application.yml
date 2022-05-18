@@ -1,12 +1,14 @@
 server:
   port: 8090
+  servlet:
+    context-path: /api/job-seekers
 spring:
   application:
     name: ms-job-seekers
   datasource:
-    url: ${DB_URL}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    url: jdbc:postgresql://localhost:5432/ms-job-seekers
+    username: admin
+    password: password
   jpa:
     hibernate:
       ddl-auto: update
