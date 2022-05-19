@@ -1,8 +1,10 @@
 package erecruitmentanem.msjobseeker.repositories;
-
-import erecruitmentanem.msjobseeker.entities.JobRequest;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import erecruitmentanem.msjobseeker.entities.JobRequest;
+
 public interface JobRequestRepository
-        extends JpaRepository<JobRequest,Long> {
+    extends JpaRepository<JobRequest,Long> {
 }
+
+

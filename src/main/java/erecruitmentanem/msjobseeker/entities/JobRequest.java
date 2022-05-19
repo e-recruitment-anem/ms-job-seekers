@@ -1,5 +1,6 @@
 package erecruitmentanem.msjobseeker.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import erecruitmentanem.msjobseeker.enums.JobRequestStatus;
 import erecruitmentanem.msjobseeker.enums.Mobility;
 import lombok.AllArgsConstructor;
@@ -19,7 +20,7 @@ public class JobRequest {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idJobRequest")
-    private Long idJobSeeker ;
+    private Long idJobRequest ;
 
     private Number agency ;
     private Number admin ;
@@ -40,6 +41,7 @@ public class JobRequest {
     @Enumerated(EnumType.STRING)
     private JobRequestStatus status ;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "idJobSeeker", nullable = false)
     private JobSeeker jobSeeker;

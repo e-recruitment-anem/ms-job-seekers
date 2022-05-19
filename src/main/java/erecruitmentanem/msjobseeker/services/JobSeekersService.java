@@ -1,5 +1,7 @@
 package erecruitmentanem.msjobseeker.services;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import erecruitmentanem.msjobseeker.DTOs.CreateJobSeeker;
@@ -11,9 +13,9 @@ import erecruitmentanem.msjobseeker.helpers.ExceptionsHandler;
 import erecruitmentanem.msjobseeker.helpers.ResponseHandler;
 import erecruitmentanem.msjobseeker.repositories.JobSeekersRepository;
 
-@Service
+@Service @RequiredArgsConstructor
 public class JobSeekersService {
-    @Autowired(required = false)
+    @Autowired
     JobSeekersRepository jobSeekersRepository;
 
   

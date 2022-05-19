@@ -45,8 +45,8 @@ public class JobSeeker {
     private String phoneNumber ;
     private String educationalLevel ;
     private String qualificationLevel ;
-    private String languages ;
-    private Number skills ;
+    private String[] languages ;
+    private Number[] skills ;
 
     @Enumerated(EnumType.STRING)
     private MillitaryStatus milltarySituation ;

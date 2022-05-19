@@ -5,25 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c088690-409e-48d5-840c-ebb165bd1583" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/DTOs/JobSeekersDTOs/CreateJobSeeker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/DTOs/JobSeekersDTOs/JobSeekerDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/DTOs/JobSeekersDTOs/JobSeekerLanguagesDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/DTOs/JobSeekersDTOs/JobSeekerSkillsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/JobRequestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/repositories/JobRequestPaginationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/services/JobRequestsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-job-seeker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-job-seeker.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/DTOs/CreateJobSeeker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/DTOs/CreateJobSeeker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/DTOs/JobSeekerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/DTOs/JobSeekerDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/JobSeekersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/JobSeekersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/JobRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/JobRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/JobSeeker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/JobSeeker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/repositories/JobRequestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/repositories/JobRequestRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/services/JobSeekersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/services/JobSeekersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/DTOs/CreateJobSeeker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/DTOs/CreateJobSeeker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/DTOs/JobSeekerDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/DTOs/JobSeekerDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/DTOs/JobSeekerLanguagesDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/DTOs/JobSeekerLanguagesDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/DTOs/JobSeekerSkillsDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/DTOs/JobSeekerSkillsDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/MsJobSeekerApplication.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/controllers/JobSeekersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/controllers/JobSeekersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/Diplome.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/DrivingLicense.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/DrivingLicense.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/JobRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/JobRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/JobSeeker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/JobSeeker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/ProfessionalExperience.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/ProfessionalExperience.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/enums/Disability.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/enums/FamilySituation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/enums/Gender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/enums/IdentityCardType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/enums/JobRequestStatus.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/enums/MillitaryStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/enums/MillitaryStatus.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/enums/Mobility.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/enums/Mobility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/enums/dispositif.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/helpers/ExceptionsHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/helpers/ExceptionsHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/helpers/ResponseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/helpers/ResponseHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/repositories/DrivingLicenseRespository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/repositories/JobRequestRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/repositories/JobSeekersRepository.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/repositories/ProffesionalExpRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/repositories/ProffesionalExpRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/services/JobSeekersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/services/JobSeekersService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/erecruitmentanem/msjobseeker/MsJobSeekerApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +65,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
         <option value="Interface" />
       </list>
     </option>
@@ -54,7 +86,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -126,7 +158,11 @@
       <workItem from="1652868730831" duration="6301000" />
       <workItem from="1652901295278" duration="3312000" />
       <workItem from="1652905109107" duration="341000" />
-      <workItem from="1652957492057" duration="1147000" />
+      <workItem from="1652957492057" duration="1392000" />
+      <workItem from="1652960014287" duration="546000" />
+      <workItem from="1652964460495" duration="155000" />
+      <workItem from="1652964686835" duration="17191000" />
+      <workItem from="1653002036896" duration="1285000" />
     </task>
     <servers />
   </component>
@@ -143,5 +179,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

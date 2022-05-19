@@ -1,4 +1,4 @@
-package erecruitmentanem.msjobseeker.DTOs;
+package erecruitmentanem.msjobseeker.DTOs.JobSeekersDTOs;
 
 import java.sql.Date;
 
@@ -7,13 +7,9 @@ import erecruitmentanem.msjobseeker.enums.FamilySituation;
 import erecruitmentanem.msjobseeker.enums.Gender;
 import erecruitmentanem.msjobseeker.enums.IdentityCardType;
 import erecruitmentanem.msjobseeker.enums.MillitaryStatus;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class JobSeekerDto {
     private String firstName ;
     private String lastName ;
