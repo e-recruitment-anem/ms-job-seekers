@@ -82,7 +82,7 @@ public class JobSeekersService {
             return ExceptionsHandler.itemNotFoundException();   
         }
         JobSeeker jobSeeker = jobSeekersRepository.findById(id).get();
-        jobSeeker.setSkills(body.getSkills());
+        //jobSeeker.setSkills(body.getSkills());
         jobSeekersRepository.save(jobSeeker);
         return ResponseHandler.generateResponse("job seeker skills updatedSuccessfully.", jobSeeker.getSkills());
         
@@ -93,7 +93,7 @@ public class JobSeekersService {
             return ExceptionsHandler.itemNotFoundException();   
         }
         JobSeeker jobSeeker = jobSeekersRepository.findById(id).get();
-        jobSeeker.setLanguages(body.getLanguages());
+        //jobSeeker.setLanguages(body.getLanguages());
         jobSeekersRepository.save(jobSeeker);
         return ResponseHandler.generateResponse("job seeker languages updatedSuccessfully.", jobSeeker.getLanguages());
         
