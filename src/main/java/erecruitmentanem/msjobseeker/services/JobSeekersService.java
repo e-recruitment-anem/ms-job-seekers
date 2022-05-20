@@ -1,7 +1,6 @@
 package erecruitmentanem.msjobseeker.services;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import erecruitmentanem.msjobseeker.DTOs.CreateJobSeeker;
@@ -84,7 +83,7 @@ public class JobSeekersService {
             return ExceptionsHandler.itemNotFoundException();   
         }
         JobSeeker jobSeeker = jobSeekersRepository.findById(id).get();
-        //jobSeeker.setSkills(body.getSkills());
+        jobSeeker.setSkills(body.getSkills());
         jobSeekersRepository.save(jobSeeker);
         return ResponseHandler.generateResponse("job seeker skills updatedSuccessfully.", jobSeeker.getSkills());
         

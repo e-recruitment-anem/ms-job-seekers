@@ -1,7 +1,4 @@
 package erecruitmentanem.msjobseeker.services;
-
-import erecruitmentanem.msjobseeker.DTOs.CreateJobSeeker;
-import erecruitmentanem.msjobseeker.DTOs.JobSeekerDto;
 import erecruitmentanem.msjobseeker.entities.JobRequest;
 import erecruitmentanem.msjobseeker.entities.JobSeeker;
 import erecruitmentanem.msjobseeker.helpers.ExceptionsHandler;
@@ -17,8 +14,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @Service @RequiredArgsConstructor
@@ -32,11 +27,9 @@ public class JobRequestsService {
     @Autowired
     JobRequestPaginationRepository jobRequestPaginationRepository;
 
-
-
-
     public ResponseEntity<Object> createJobRequest(JobRequest body){
         try {
+            // verify if job seeker exist first
             JobRequest jobRequest = new JobRequest();
             jobRequest.setAgency(body.getAgency());
             jobRequest.setAdmin(body.getAdmin());
@@ -88,20 +81,20 @@ public class JobRequestsService {
         return ResponseHandler.generateResponse("job request updated successfully.", jobRequest);
     }
 
-    public List<JobRequest> getJobRequestsList(int page,int size) {
+    public List<JobRequest> getJobRequests(int page,int size) {
         try {
-            Pageable paging = PageRequest.of(page, size);
+            Pageable pagination = PageRequest.of(page, size);
 
-            Page<JobRequest> pageJobReq;
-            pageJobReq = jobRequestPaginationRepository.findAll(paging);
-            return pageJobReq.getContent();
+            Page<JobRequest> jobRequestsPage;
+            jobRequestsPage = jobRequestPaginationRepository.findAll(pagination);
+            return jobRequestsPage.getContent();
         } catch (Exception e) {
             log.info(String.valueOf(e));
             return (List<JobRequest>) ExceptionsHandler.badRequestException();
         }
     }
 
-    public ResponseEntity<Object> deleteJobRequest(Long id) {
+    public ResponseEntity<Object> deleteJobRequestById(Long id) {
         try{
             jobRequestRepository.deleteById(id);
             return ResponseHandler.generateResponse("job request deleted.",null);

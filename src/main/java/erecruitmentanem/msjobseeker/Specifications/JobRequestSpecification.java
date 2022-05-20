@@ -1,11 +1,9 @@
 package erecruitmentanem.msjobseeker.Specifications;
-
 import erecruitmentanem.msjobseeker.entities.JobRequest;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Component;
 import javax.persistence.criteria.Predicate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Component

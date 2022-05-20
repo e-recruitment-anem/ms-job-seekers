@@ -1,6 +1,4 @@
 package erecruitmentanem.msjobseeker.controllers;
-
-import erecruitmentanem.msjobseeker.DTOs.JobSeekerDto;
 import erecruitmentanem.msjobseeker.entities.JobRequest;
 import erecruitmentanem.msjobseeker.helpers.ExceptionsHandler;
 import erecruitmentanem.msjobseeker.repositories.JobRequestPaginationRepository;
@@ -8,18 +6,14 @@ import erecruitmentanem.msjobseeker.repositories.JobRequestRepository;
 import erecruitmentanem.msjobseeker.services.JobRequestsService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import java.util.ArrayList;
 import java.util.List;
 
 
 @RestController
-@RequestMapping("/job_request")
+// use - instead of _
+@RequestMapping("/job_request") 
 @Slf4j
 public class JobRequestController {
 
@@ -45,9 +39,9 @@ public class JobRequestController {
         return jobRequestsService.getJobRequestById(id);
     }
 
-    @GetMapping("/list")
+    @GetMapping
     List<JobRequest> getJobRequests(@RequestParam("page") int page,@RequestParam("size") int size){
-        return jobRequestsService.getJobRequestsList(page,size);
+        return jobRequestsService.getJobRequests(page,size);
     }
 
 
@@ -58,7 +52,7 @@ public class JobRequestController {
 
     @DeleteMapping("/{id}")
     ResponseEntity<Object> deleteJobRequest(@PathVariable("id") Long id){
-        return jobRequestsService.deleteJobRequest(id);
+        return jobRequestsService.deleteJobRequestById(id);
     }
 
 }
