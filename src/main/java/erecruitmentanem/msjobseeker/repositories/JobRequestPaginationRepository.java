@@ -1,12 +1,12 @@
 package erecruitmentanem.msjobseeker.repositories;
-import org.springframework.data.jpa.repository.JpaRepository;
+
 import erecruitmentanem.msjobseeker.entities.JobRequest;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
-public interface JobRequestPaginationRepository<T, ID> extends CrudRepository<T, ID> {
-    //Page<T> findAll(Pageable pageable);
+import java.util.List;
 
-    Page<JobRequest> findAll(Pageable pageable);
+public interface JobRequestPaginationRepository extends PagingAndSortingRepository<JobRequest, Integer> {
+
+    List<JobRequest> findAllByReason(String reason, Pageable pageable);
 }

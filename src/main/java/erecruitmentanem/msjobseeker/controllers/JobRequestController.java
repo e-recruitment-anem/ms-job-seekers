@@ -1,10 +1,12 @@
 package erecruitmentanem.msjobseeker.controllers;
 
+import erecruitmentanem.msjobseeker.DTOs.JobSeekerDto;
 import erecruitmentanem.msjobseeker.entities.JobRequest;
 import erecruitmentanem.msjobseeker.helpers.ExceptionsHandler;
 import erecruitmentanem.msjobseeker.repositories.JobRequestPaginationRepository;
 import erecruitmentanem.msjobseeker.repositories.JobRequestRepository;
 import erecruitmentanem.msjobseeker.services.JobRequestsService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +20,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/job_request")
+@Slf4j
 public class JobRequestController {
 
     @Autowired(required = false)
@@ -44,18 +47,18 @@ public class JobRequestController {
 
     @GetMapping("/list")
     List<JobRequest> getJobRequests(@RequestParam("page") int page,@RequestParam("size") int size){
-        //List<JobRequest> jobRequest = new ArrayList<JobRequest>();
-        //Pageable paging = PageRequest.of(page, size);
-        //Page<JobRequest> pageJobReq = jobRequestRepository.findAll(true, paging);
+        return jobRequestsService.getJobRequestsList(page,size);
+    }
 
-        List<JobRequest> jobRequests = new ArrayList<JobRequest>();
-        Pageable paging = PageRequest.of(page, size);
 
-        Page<JobRequest> pageJobReq;
-        pageJobReq = JobRequestPaginationRepository.findAll(paging);
+    @PutMapping("{id}")
+    ResponseEntity<Object> updateJobRequest(@PathVariable("id") Long id , @RequestBody JobRequest body){
+        return jobRequestsService.updateJobRequest(id , body);
+    }
 
-        return pageJobReq.getContent();
-        //return jobRequestsService.getJobRequestsList(page);
+    @DeleteMapping("/{id}")
+    ResponseEntity<Object> deleteJobRequest(@PathVariable("id") Long id){
+        return jobRequestsService.deleteJobRequest(id);
     }
 
 }
