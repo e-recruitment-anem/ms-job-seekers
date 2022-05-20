@@ -5,6 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.Date;
 
 @Entity
@@ -21,7 +24,8 @@ public class ProfessionalExperience {
     private Long idJobTitle ;
     private String description ;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY, optional = false )
     @JoinColumn(name = "idJobSeeker", nullable = false)
     private JobSeeker jobSeeker;
 

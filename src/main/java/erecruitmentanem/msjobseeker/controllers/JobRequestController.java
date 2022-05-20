@@ -44,6 +44,8 @@ public class JobRequestController {
         return jobRequestsService.getJobRequests(page,size);
     }
 
+    
+
 
     @PutMapping("{id}")
     ResponseEntity<Object> updateJobRequest(@PathVariable("id") Long id , @RequestBody JobRequest body){
