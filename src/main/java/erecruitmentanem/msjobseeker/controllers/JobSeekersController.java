@@ -3,12 +3,12 @@ import erecruitmentanem.msjobseeker.DTOs.CreateJobSeeker;
 import erecruitmentanem.msjobseeker.DTOs.JobSeekerDto;
 import erecruitmentanem.msjobseeker.DTOs.JobSeekerLanguagesDto;
 import erecruitmentanem.msjobseeker.DTOs.JobSeekerSkillsDto;
+import erecruitmentanem.msjobseeker.helpers.ExceptionsHandler;
 import erecruitmentanem.msjobseeker.services.JobSeekersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
@@ -24,9 +24,14 @@ public class JobSeekersController {
     }
     
 
-    @PostMapping
+    @PostMapping("/create")
     ResponseEntity<Object> createJobSeeker(@RequestBody CreateJobSeeker body){   
-        return jobSeekersService.createJobSeeker(body);
+        try {
+            return jobSeekersService.createJobSeeker(body);
+        } catch (Exception e) {
+           return ExceptionsHandler.badRequestException();
+
+         }
     }
 
     @GetMapping("{id}")

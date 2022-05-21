@@ -6,7 +6,7 @@ spring:
   application:
     name: ms-job-seekers
   datasource:
-    url: jdbc:postgresql://localhost:5432/ms_job_seekers
+    url: jdbc:postgresql://localhost:5432/service_job_seekers2
     username: imadmansour
     password: imadmansour
   jpa:

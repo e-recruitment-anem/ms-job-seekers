@@ -22,8 +22,8 @@ public class JobRequest {
     @Column(name = "idJobRequest")
     private Long idJobRequest ;
 
-    private Number agency ;
-    private Number admin ;
+    private int agency ;
+    private int admin ;
     private Date date ;
     private String reason ;
     private Boolean deviceEligibility ;

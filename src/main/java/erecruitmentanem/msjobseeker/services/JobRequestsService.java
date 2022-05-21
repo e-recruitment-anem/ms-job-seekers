@@ -1,4 +1,5 @@
 package erecruitmentanem.msjobseeker.services;
+import erecruitmentanem.msjobseeker.Specifications.JobRequestSpecification;
 import erecruitmentanem.msjobseeker.entities.JobRequest;
 import erecruitmentanem.msjobseeker.entities.JobSeeker;
 import erecruitmentanem.msjobseeker.helpers.ExceptionsHandler;
@@ -9,9 +10,11 @@ import erecruitmentanem.msjobseeker.repositories.JobSeekersRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -22,14 +25,24 @@ public class JobRequestsService {
 
     @Autowired
     JobRequestRepository jobRequestRepository;
+   
     @Autowired
     JobSeekersRepository jobSeekerRepository;
+
     @Autowired
     JobRequestPaginationRepository jobRequestPaginationRepository;
 
-    public ResponseEntity<Object> createJobRequest(JobRequest body){
+    @Autowired
+    private JobRequestSpecification jobRequestSpecification;
+
+    //@Value("${pagination.page.size.default}")
+    //private Integer defaultPageSize;
+
+    public ResponseEntity<Object> createJobRequest(JobRequest body,Long idJobSeeker){
         try {
-            // verify if job seeker exist first
+            if(jobRequestRepository.existsById(idJobSeeker) == false){
+                return ExceptionsHandler.itemNotFoundException();
+            }
             JobRequest jobRequest = new JobRequest();
             jobRequest.setAgency(body.getAgency());
             jobRequest.setAdmin(body.getAdmin());
@@ -40,12 +53,14 @@ public class JobRequestsService {
             jobRequest.setMobility(body.getMobility());
             jobRequest.setNightWork(body.getNightWork());
             jobRequest.setReason(body.getReason());
+            jobRequest.setTraining(body.getTraining());
             jobRequest.setJobSeeker(new JobSeeker());
-            jobRequest.setJobSeeker(jobSeekerRepository.findById(1L).get());
+            jobRequest.setJobSeeker(jobSeekerRepository.findById(idJobSeeker).get());
             jobRequestRepository.save(jobRequest);
             return ResponseHandler.generateResponse("job request created ", jobRequest);
         } catch (Exception e) {
-            log.info(String.valueOf(e));
+            //log.info(String.valueOf(e));
+            System.out.println(e);
             return ExceptionsHandler.badRequestException();
         }
     }
@@ -81,17 +96,16 @@ public class JobRequestsService {
         return ResponseHandler.generateResponse("job request updated successfully.", jobRequest);
     }
 
-    public List<JobRequest> getJobRequests(int page,int size) {
-        try {
-            Pageable pagination = PageRequest.of(page, size);
+    public Page<JobRequest> getJobRequests(int page,int size,JobRequest request) {
+        //try {
 
-            Page<JobRequest> jobRequestsPage;
-            jobRequestsPage = jobRequestPaginationRepository.findAll(pagination);
-            return jobRequestsPage.getContent();
-        } catch (Exception e) {
-            log.info(String.valueOf(e));
-            return (List<JobRequest>) ExceptionsHandler.badRequestException();
-        }
+            List<JobRequest> list = null;
+            Page<JobRequest> pages = null;
+            if (page == 1) {
+                Pageable paging = PageRequest.of(page , size );
+                pages = new PageImpl<>(jobRequestRepository.findAll(jobRequestSpecification.getJobRequests(request)));
+             } 
+            return pages;
     }
 
     public ResponseEntity<Object> deleteJobRequestById(Long id) {
@@ -104,5 +118,8 @@ public class JobRequestsService {
         }
     }
 
+
+
+    
 
     }
