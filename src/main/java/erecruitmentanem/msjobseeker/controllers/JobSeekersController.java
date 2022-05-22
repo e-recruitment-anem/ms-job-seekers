@@ -28,7 +28,8 @@ public class JobSeekersController {
     @GetMapping(value="hello")
     public String getMethodName() {
         try{
-        producer.sendJobRequest(new JobRequest());
+            log.info("String.valueOf(e)" , "hello");
+        producer.test();
         }catch(Exception e){
             log.info(String.valueOf(e));
 

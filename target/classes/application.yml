@@ -17,6 +17,9 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
+  kafka:
+    consumer:
+      group-id: "default"
 
 topic:
   job-seekers:

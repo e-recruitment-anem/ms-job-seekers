@@ -47,6 +47,15 @@ public class BrokerConfig {
                 .build();
     }
 
+    @Bean
+    public NewTopic jobSeekerTopic() {
+        return TopicBuilder
+                .name("job-seekers.create-job-seeker")
+                .partitions(1)
+                .replicas(1)
+                .build();
+    }
+
 
     // ---------------- consumer ---------------
     @Bean

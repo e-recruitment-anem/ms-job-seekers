@@ -10,6 +10,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 import erecruitmentanem.msjobseeker.entities.JobRequest;
+import erecruitmentanem.msjobseeker.entities.JobSeeker;
 
 
 
@@ -36,6 +37,12 @@ public class Producer {
         kafkaTemplate.send("job-seekers.create-job-request",jobRequestAsMessage);
         log.info("job request produced {}", jobRequestAsMessage);
         return "message sent";
+
+    }
+
+    public void test() throws JsonProcessingException{
+        String message = objectMapper.writeValueAsString(new JobSeeker());
+        kafkaTemplate.send("job-seekers.create-job-seeker",message);
 
     }
 }
