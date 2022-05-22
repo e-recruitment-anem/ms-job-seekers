@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c088690-409e-48d5-840c-ebb165bd1583" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/Specifications/JobRequestSpecification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/repositories/jobRequestSpecificationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/JobRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/JobRequestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/repositories/JobRequestPaginationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/repositories/JobRequestPaginationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/services/JobRequestsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/services/JobRequestsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-job-seeker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-job-seeker.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,13 +51,6 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="29GqY9SqblueJPL51jSdDKHjg1l" />
   <component name="ProjectLevelVcsManager">
@@ -127,6 +116,7 @@
       <workItem from="1652964686835" duration="17191000" />
       <workItem from="1653002036896" duration="9408000" />
       <workItem from="1653058726695" duration="533000" />
+      <workItem from="1653241681371" duration="267000" />
     </task>
     <servers />
   </component>
@@ -143,6 +133,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LAST_COMMIT_MESSAGE" value="" />
