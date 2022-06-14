@@ -38,10 +38,10 @@ public class JobSeekersController {
     }
     
 
-    @PostMapping
-    ResponseEntity<Object> createJobSeeker(@RequestBody CreateJobSeeker body){   
-        return jobSeekersService.createJobSeeker(body);
-    }
+    // @PostMapping
+    // ResponseEntity<Object> createJobSeeker(@RequestBody CreateJobSeeker body){   
+    //     return jobSeekersService.createJobSeeker(body);
+    // }
 
     @GetMapping("{id}")
     ResponseEntity<Object> getJobSeeker(@PathVariable("id") Long id){   

@@ -16,6 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Component
 public class Consumer {
+    private static final String orderTopic = "${topic.name}";
 
     private final ObjectMapper objectMapper;
     private final ModelMapper modelMapper;
@@ -31,6 +32,10 @@ public class Consumer {
     @KafkaListener(topics = "job-seekers.create-job-seeker")
     public void consumeMessage(String message) throws JsonProcessingException {
         CreateJobSeeker createJobSeeker = objectMapper.readValue(message, CreateJobSeeker.class);
-        jobSeekersService.createJobSeeker(createJobSeeker);
+        
+        CreateJobSeeker jobSeeker = modelMapper.map(createJobSeeker, CreateJobSeeker.class);
+        // log.info("message consumed {}",  jobSeeker);
+        jobSeekersService.createJobSeeker(jobSeeker);
     }
+
 }

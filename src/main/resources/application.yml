@@ -6,9 +6,9 @@ spring:
   application:
     name: ms-job-seekers
   datasource:
-    url: jdbc:postgresql://localhost:5432/ms-job-seekers
-    username: admin
-    password: password
+    url: jdbc:postgresql://ec2-54-147-33-38.compute-1.amazonaws.com:5432/detkc9trf1mvm2
+    username: fryabpkvotxydw
+    password: b52f00ea1f1c685a1aae205f7b917f82c54f54891e6e829d9047e5f060c4e728
   jpa:
     hibernate:
       ddl-auto: update

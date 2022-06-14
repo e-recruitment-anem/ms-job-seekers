@@ -1,5 +1,7 @@
 package erecruitmentanem.msjobseeker.services;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -13,6 +15,7 @@ import erecruitmentanem.msjobseeker.helpers.ResponseHandler;
 import erecruitmentanem.msjobseeker.repositories.JobSeekersRepository;
 
 @Service @RequiredArgsConstructor
+@Slf4j
 public class JobSeekersService {
     @Autowired
     JobSeekersRepository jobSeekersRepository;
@@ -21,19 +24,20 @@ public class JobSeekersService {
 
     public ResponseEntity<Object> createJobSeeker(CreateJobSeeker body){
         try {
-        JobSeeker jobSeeker = new JobSeeker();
-        jobSeeker.setIdJobSeeker(body.getIdJobSeeker());
-        jobSeeker.setFirstName(body.getFirstName());
-        jobSeeker.setLastName(body.getLastName());
-        jobSeeker.setGender(body.getGender());
-        jobSeeker.setBirthDate(body.getBirthDate());
-        jobSeeker.setBirthPlace(body.getBirthPlace());
-        jobSeeker.setAddress(body.getAddress());
-        jobSeeker.setPostalCode(body.getPostalCode());
-        jobSeeker.setResidenceCity(body.getResidenceCity());
-        jobSeeker.setNationality(body.getNationality());
-        jobSeeker.setPhoneNumber(body.getPhoneNumber());
-        jobSeekersRepository.save(jobSeeker);
+            JobSeeker jobSeeker = new JobSeeker();
+            jobSeeker.setIdJobSeeker(body.getIdJobSeeker());
+            jobSeeker.setFirstName(body.getFirstName());
+            jobSeeker.setLastName(body.getLastName());
+            jobSeeker.setGender(body.getGender());
+            jobSeeker.setBirthDate(body.getBirthDate());
+            jobSeeker.setBirthPlace(body.getBirthPlace());
+            jobSeeker.setAddress(body.getAddress());
+            jobSeeker.setPostalCode(body.getPostalCode());
+            jobSeeker.setResidenceCity(body.getResidenceCity());
+            jobSeeker.setNationality(body.getNationality());
+            jobSeeker.setPhoneNumber(body.getPhoneNumber());
+            // log.info("message consumed {}",  jobSeeker.getIdJobSeeker());
+            jobSeekersRepository.save(jobSeeker);
         return ResponseHandler.generateResponse("message", jobSeeker);
         } catch (Exception e) {
            return ExceptionsHandler.badRequestException();
