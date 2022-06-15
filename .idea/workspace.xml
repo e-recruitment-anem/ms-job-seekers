@@ -6,6 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="9c088690-409e-48d5-840c-ebb165bd1583" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-job-seeker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-job-seeker.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/JobSeekersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/JobSeekersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/DTOs/CreateJobSeeker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/DTOs/CreateJobSeeker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/controllers/JobSeekersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/controllers/JobSeekersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/DrivingLicense.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/DrivingLicense.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/JobRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/JobRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/JobSeeker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/JobSeeker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/ProfessionalExperience.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/ProfessionalExperience.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/services/JobSeekersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/services/JobSeekersService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,19 +55,12 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="29GqY9SqblueJPL51jSdDKHjg1l" />
   <component name="ProjectLevelVcsManager">
@@ -132,6 +136,8 @@
       <workItem from="1655208766403" duration="3245000" />
       <workItem from="1655228100725" duration="7786000" />
       <workItem from="1655298559286" duration="8039000" />
+      <workItem from="1653058726695" duration="533000" />
+      <workItem from="1653241681371" duration="267000" />
     </task>
     <servers />
   </component>

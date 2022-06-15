@@ -59,9 +59,6 @@
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-jpa:2.6.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:2.6.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-orm:5.3.19" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-context:5.3.19" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.3.19" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.3.19" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.3.19" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.36" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aspects:5.3.19" level="project" />
@@ -100,6 +97,17 @@
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-crypto:5.6.3" level="project" />
     <orderEntry type="library" name="Maven: io.github.openfeign:feign-core:11.8" level="project" />
     <orderEntry type="library" name="Maven: io.github.openfeign:feign-slf4j:11.8" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.kafka:spring-kafka:2.8.5" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context:5.3.19" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.3.19" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-messaging:5.3.19" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.3.19" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.retry:spring-retry:1.3.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.kafka:kafka-clients:3.0.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.github.luben:zstd-jni:1.5.0-2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lz4:lz4-java:1.7.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.xerial.snappy:snappy-java:1.1.8.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.google.code.findbugs:jsr305:3.0.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.springframework.boot:spring-boot-devtools:2.6.7" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.6.7" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.6.7" level="project" />
@@ -144,5 +152,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.3.19" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:5.3.19" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.8.4" level="project" />
+    <orderEntry type="library" name="Maven: org.modelmapper:modelmapper:3.0.0" level="project" />
   </component>
 </module>

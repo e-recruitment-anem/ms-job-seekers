@@ -23,6 +23,7 @@ public class DrivingLicense {
     private Long idDrivingLicense ;
 
     private Date deliveryDate ;
+    // Driving license type
     private Date category ;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)

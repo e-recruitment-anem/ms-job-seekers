@@ -37,19 +37,20 @@ public class JobSeekersService {
 
     public ResponseEntity<Object> createJobSeeker(CreateJobSeeker body){
         try {
-        JobSeeker jobSeeker = new JobSeeker();
-        jobSeeker.setIdJobSeeker(body.getIdJobSeeker());
-        jobSeeker.setFirstName(body.getFirstName());
-        jobSeeker.setLastName(body.getLastName());
-        jobSeeker.setGender(body.getGender());
-        jobSeeker.setBirthDate(body.getBirthDate());
-        jobSeeker.setBirthPlace(body.getBirthPlace());
-        jobSeeker.setAddress(body.getAddress());
-        jobSeeker.setPostalCode(body.getPostalCode());
-        jobSeeker.setResidenceCity(body.getResidenceCity());
-        jobSeeker.setNationality(body.getNationality());
-        jobSeeker.setPhoneNumber(body.getPhoneNumber());
-        jobSeekersRepository.save(jobSeeker);
+            JobSeeker jobSeeker = new JobSeeker();
+            jobSeeker.setIdJobSeeker(body.getIdJobSeeker());
+            jobSeeker.setFirstName(body.getFirstName());
+            jobSeeker.setLastName(body.getLastName());
+            jobSeeker.setGender(body.getGender());
+            jobSeeker.setBirthDate(body.getBirthDate());
+            jobSeeker.setBirthPlace(body.getBirthPlace());
+            jobSeeker.setAddress(body.getAddress());
+            jobSeeker.setPostalCode(body.getPostalCode());
+            jobSeeker.setResidenceCity(body.getResidenceCity());
+            jobSeeker.setNationality(body.getNationality());
+            jobSeeker.setPhoneNumber(body.getPhoneNumber());
+            // log.info("message consumed {}",  jobSeeker.getIdJobSeeker());
+            jobSeekersRepository.save(jobSeeker);
         return ResponseHandler.generateResponse("message", jobSeeker);
         } catch (Exception e) {
             System.out.println(e);
