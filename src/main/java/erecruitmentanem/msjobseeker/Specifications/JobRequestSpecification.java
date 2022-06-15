@@ -12,7 +12,6 @@ public class JobRequestSpecification {
         return (root, query, criteriaBuilder) -> {
 
             List<Predicate> predicates = new ArrayList<>();
-            System.out.println(request.getAgency());
             if (request.getAgency() != 0 ) {
                 predicates.add(criteriaBuilder.equal(root.get("agency"),request.getAgency()));
             }

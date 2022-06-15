@@ -1,6 +1,7 @@
 package erecruitmentanem.msjobseeker.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import erecruitmentanem.msjobseeker.enums.JobRequestStatus;
 import erecruitmentanem.msjobseeker.enums.Mobility;
 import lombok.AllArgsConstructor;

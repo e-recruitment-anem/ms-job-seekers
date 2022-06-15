@@ -1,20 +1,18 @@
+
 package erecruitmentanem.msjobseeker.services;
 import erecruitmentanem.msjobseeker.Specifications.JobRequestSpecification;
 import erecruitmentanem.msjobseeker.entities.JobRequest;
 import erecruitmentanem.msjobseeker.entities.JobSeeker;
 import erecruitmentanem.msjobseeker.helpers.ExceptionsHandler;
 import erecruitmentanem.msjobseeker.helpers.ResponseHandler;
-import erecruitmentanem.msjobseeker.repositories.JobRequestPaginationRepository;
 import erecruitmentanem.msjobseeker.repositories.JobRequestRepository;
 import erecruitmentanem.msjobseeker.repositories.JobSeekersRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -30,13 +28,8 @@ public class JobRequestsService {
     JobSeekersRepository jobSeekerRepository;
 
     @Autowired
-    JobRequestPaginationRepository jobRequestPaginationRepository;
+    JobRequestSpecification jobRequestSpecification;
 
-    @Autowired
-    private JobRequestSpecification jobRequestSpecification;
-
-    //@Value("${pagination.page.size.default}")
-    //private Integer defaultPageSize;
 
     public ResponseEntity<Object> createJobRequest(JobRequest body,Long idJobSeeker){
         try {
@@ -96,16 +89,21 @@ public class JobRequestsService {
         return ResponseHandler.generateResponse("job request updated successfully.", jobRequest);
     }
 
-    public Page<JobRequest> getJobRequests(int page,int size,JobRequest request) {
-        //try {
+    public ResponseEntity<Object> getJobRequests(int page, int size, JobRequest request) {
 
-            List<JobRequest> list = null;
+        try{
             Page<JobRequest> pages = null;
-            if (page == 1) {
-                Pageable paging = PageRequest.of(page , size );
-                pages = new PageImpl<>(jobRequestRepository.findAll(jobRequestSpecification.getJobRequests(request)));
-             } 
-            return pages;
+            if (page > -1) {
+                Pageable paging = PageRequest.of(page, size);
+                pages = jobRequestRepository.findAll( jobRequestSpecification.getJobRequests(request),paging);
+            }
+            return ResponseHandler.generateResponse("job request List.",pages);
+        }catch (Exception e) {
+            log.info(String.valueOf(e));
+            return ExceptionsHandler.badRequestException();
+        }
+
+
     }
 
     public ResponseEntity<Object> deleteJobRequestById(Long id) {
@@ -123,3 +121,5 @@ public class JobRequestsService {
     
 
     }
+
+

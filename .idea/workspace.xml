@@ -5,18 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c088690-409e-48d5-840c-ebb165bd1583" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/Specifications/JobSeekerSpecification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/MsJobSeekerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/MsJobSeekerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/Specifications/JobRequestSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/Specifications/JobRequestSpecification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/JobRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/JobRequestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/JobSeekersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/JobSeekersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/Diplome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/Diplome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/DrivingLicense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/DrivingLicense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/JobRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/JobRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/JobSeeker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/JobSeeker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/ProfessionalExperience.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/entities/ProfessionalExperience.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/repositories/JobRequestPaginationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/repositories/JobRequestPaginationRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/repositories/JobRequestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/repositories/JobRequestRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/repositories/JobSeekersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/repositories/JobSeekersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/repositories/jobRequestSpecificationRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/services/JobRequestsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/services/JobRequestsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/services/JobSeekersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/services/JobSeekersService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/DTOs/CreateJobSeeker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/DTOs/CreateJobSeeker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/DTOs/JobSeekerDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/DTOs/JobSeekerDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/controllers/JobSeekersController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/controllers/JobSeekersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/controllers/JobSeekersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/DrivingLicense.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/DrivingLicense.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/JobRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/JobRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/JobSeeker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/JobSeeker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/services/JobSeekersService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/ProfessionalExperience.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/entities/ProfessionalExperience.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/services/JobSeekersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/erecruitmentanem/msjobseeker/services/JobSeekersService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +147,13 @@
       <workItem from="1653002036896" duration="9408000" />
       <workItem from="1653058726695" duration="2258000" />
       <workItem from="1653064678463" duration="500000" />
+      <workItem from="1653217550553" duration="88000" />
+      <workItem from="1655155509836" duration="4075000" />
+      <workItem from="1655164161092" duration="6769000" />
+      <workItem from="1655201740640" duration="1039000" />
+      <workItem from="1655208766403" duration="3245000" />
+      <workItem from="1655228100725" duration="7786000" />
+      <workItem from="1655298559286" duration="7103000" />
     </task>
     <servers />
   </component>

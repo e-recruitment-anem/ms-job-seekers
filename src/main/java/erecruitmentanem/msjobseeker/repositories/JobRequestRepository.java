@@ -6,16 +6,19 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
 import erecruitmentanem.msjobseeker.entities.JobRequest;
 
-@Repository
+@RepositoryRestResource
 public interface JobRequestRepository
-    extends JpaRepository<JobRequest,Long>, JpaSpecificationExecutor<JobRequest> {
+    extends JpaRepository<JobRequest,Long>, JpaSpecificationExecutor<JobRequest>
+    {
 
-        public Page<JobRequest> findAll(Specification<JobRequest> spec, Pageable pageable);
-        public List<JobRequest> findAll(Specification<JobRequest> spec);
+         Page<JobRequest> findAll(Specification<JobRequest> spec, Pageable pageable);
+         List<JobRequest> findAll(Specification<JobRequest> spec);
 }
 
 

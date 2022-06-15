@@ -1,7 +1,6 @@
 package erecruitmentanem.msjobseeker.controllers;
 import erecruitmentanem.msjobseeker.entities.JobRequest;
 import erecruitmentanem.msjobseeker.helpers.ExceptionsHandler;
-import erecruitmentanem.msjobseeker.repositories.JobRequestPaginationRepository;
 import erecruitmentanem.msjobseeker.repositories.JobRequestRepository;
 import erecruitmentanem.msjobseeker.services.JobRequestsService;
 import lombok.extern.slf4j.Slf4j;
@@ -13,8 +12,7 @@ import java.util.List;
 
 
 @RestController
-// use - instead of _
-@RequestMapping("/job_request") 
+@RequestMapping("/job-request") 
 @Slf4j
 public class JobRequestController {
 
@@ -22,8 +20,6 @@ public class JobRequestController {
     JobRequestsService jobRequestsService;
     @Autowired(required = false)
     JobRequestRepository jobRequestRepository;
-    @Autowired(required = false)
-    JobRequestPaginationRepository jobRequestPaginationRepository;
 
 
     @PostMapping("/{idJobSeeker}")
@@ -40,9 +36,9 @@ public class JobRequestController {
     }
 
 
-    @GetMapping("/list")
-    Page<JobRequest> getJobRequests(@RequestParam("page") int page,@RequestParam("size") int size ,@RequestBody JobRequest request){
-        return jobRequestsService.getJobRequests(page,size ,request);
+    @GetMapping("/search")
+    ResponseEntity<Object> getJobRequests(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "3") int size , @RequestBody JobRequest request){
+        return jobRequestsService.getJobRequests(page, size, request);
     }
 
 

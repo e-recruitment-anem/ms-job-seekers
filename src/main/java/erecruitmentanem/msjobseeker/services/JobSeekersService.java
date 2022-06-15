@@ -1,8 +1,14 @@
 package erecruitmentanem.msjobseeker.services;
+import erecruitmentanem.msjobseeker.Specifications.JobSeekerSpecification;
+import erecruitmentanem.msjobseeker.entities.JobRequest;
+import erecruitmentanem.msjobseeker.repositories.JobRequestRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import erecruitmentanem.msjobseeker.DTOs.CreateJobSeeker;
@@ -14,6 +20,8 @@ import erecruitmentanem.msjobseeker.helpers.ExceptionsHandler;
 import erecruitmentanem.msjobseeker.helpers.ResponseHandler;
 import erecruitmentanem.msjobseeker.repositories.JobSeekersRepository;
 
+import java.util.List;
+
 
 @Service @RequiredArgsConstructor
 @Slf4j
@@ -21,7 +29,11 @@ public class JobSeekersService {
     @Autowired
     JobSeekersRepository jobSeekersRepository;
 
-  
+    @Autowired
+    JobRequestRepository jobRequestRepository;
+
+    @Autowired
+    JobSeekerSpecification jobSeekerSpecification;
 
     public ResponseEntity<Object> createJobSeeker(CreateJobSeeker body){
         try {
@@ -106,4 +118,20 @@ public class JobSeekersService {
     }
 
 
+    public ResponseEntity<Object> getJobSeekers(int page, int size, JobSeeker request) {
+
+        try {
+            Page<JobSeeker> pages = null;
+            if (page > -1) {
+
+                Pageable paging = PageRequest.of(page, size);
+                pages = jobSeekersRepository.findAll( jobSeekerSpecification.getJobSeekers(request),paging);
+            }
+            return ResponseHandler.generateResponse("Get JobSeekers List.", pages);
+        } catch (Exception e) {
+            System.out.println(e);
+            return ResponseHandler.generateResponse("Bad Request.", e);
+        }
+
+    }
 }
