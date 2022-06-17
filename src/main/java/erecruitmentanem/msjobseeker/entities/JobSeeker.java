@@ -1,6 +1,8 @@
 package erecruitmentanem.msjobseeker.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import erecruitmentanem.msjobseeker.enums.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -44,7 +46,7 @@ public class JobSeeker {
     private Number identityCardDelivryCity ;
     private String phoneNumber ;
     private String educationalLevel ;
-    private String qualificationLevel ;
+        private String qualificationLevel ;
     private String[] languages ;
     private Number[] skills ;
 
@@ -63,13 +65,16 @@ public class JobSeeker {
 
     @OneToMany(mappedBy = "jobSeeker", fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
+    @JsonIgnore
     private Set<JobRequest> jobRequest;
 
     @OneToMany(mappedBy = "jobSeeker", fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
+    @JsonIgnore
     private Set<ProfessionalExperience> proffesionalExperience;
 
     @OneToMany(mappedBy = "jobSeeker", fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
+    @JsonIgnore
     private Set<DrivingLicense> drivingLicense;
 }

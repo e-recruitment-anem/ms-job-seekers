@@ -8,14 +8,14 @@ import java.util.List;
 
 @Component
 public class JobRequestSpecification {
-    public Specification<JobRequest> getUsers(JobRequest request) {
+    public Specification<JobRequest> getJobRequests(JobRequest request) {
         return (root, query, criteriaBuilder) -> {
 
             List<Predicate> predicates = new ArrayList<>();
-            if (request.getAgency() != null ) {
-                predicates.add(criteriaBuilder.equal(root.get("agency"), request.getAgency()));
+            if (request.getAgency() != 0 ) {
+                predicates.add(criteriaBuilder.equal(root.get("agency"),request.getAgency()));
             }
-            if (request.getAdmin() != null ) {
+            if (request.getAdmin() != 0) {
                 predicates.add(criteriaBuilder.equal(root.get("admin"), request.getDate()));
             }
             if (request.getDate() != null ) {
@@ -42,7 +42,7 @@ public class JobRequestSpecification {
             if (request.getAvalibility() != null ) {
                 predicates.add(criteriaBuilder.equal(root.get("avalibility"), request.getAvalibility()));
             }
-            query.orderBy(criteriaBuilder.desc(root.get("experience")));
+            query.orderBy(criteriaBuilder.desc(root.get("date")));
             return criteriaBuilder.and(predicates.toArray(new Predicate[0]));
         };
     }

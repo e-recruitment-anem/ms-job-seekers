@@ -1,19 +1,18 @@
 package erecruitmentanem.msjobseeker.controllers;
 import erecruitmentanem.msjobseeker.entities.JobRequest;
 import erecruitmentanem.msjobseeker.helpers.ExceptionsHandler;
-import erecruitmentanem.msjobseeker.repositories.JobRequestPaginationRepository;
 import erecruitmentanem.msjobseeker.repositories.JobRequestRepository;
 import erecruitmentanem.msjobseeker.services.JobRequestsService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
 @RestController
-// use - instead of _
-@RequestMapping("/job_request") 
+@RequestMapping("/job-request") 
 @Slf4j
 public class JobRequestController {
 
@@ -22,13 +21,10 @@ public class JobRequestController {
     @Autowired(required = false)
     JobRequestRepository jobRequestRepository;
 
-    @Autowired(required = false)
-    JobRequestPaginationRepository jobRequestPaginationRepository;
 
-
-    @PostMapping
-    ResponseEntity<Object> createJobRequest(@RequestBody JobRequest body){
-        return jobRequestsService.createJobRequest(body);
+    @PostMapping("/{idJobSeeker}")
+    ResponseEntity<Object> createJobRequest(@RequestBody JobRequest body,@PathVariable("idJobSeeker") Long idJobSeeker){
+        return jobRequestsService.createJobRequest(body,idJobSeeker);
     }
 
     @GetMapping("/{id}")
@@ -39,9 +35,10 @@ public class JobRequestController {
         return jobRequestsService.getJobRequestById(id);
     }
 
-    @GetMapping
-    List<JobRequest> getJobRequests(@RequestParam("page") int page,@RequestParam("size") int size){
-        return jobRequestsService.getJobRequests(page,size);
+
+    @GetMapping("/search")
+    ResponseEntity<Object> getJobRequests(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "3") int size , @RequestBody JobRequest request){
+        return jobRequestsService.getJobRequests(page, size, request);
     }
 
     

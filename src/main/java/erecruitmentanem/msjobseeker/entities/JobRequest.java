@@ -1,6 +1,7 @@
 package erecruitmentanem.msjobseeker.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import erecruitmentanem.msjobseeker.enums.JobRequestStatus;
 import erecruitmentanem.msjobseeker.enums.Mobility;
 import lombok.AllArgsConstructor;
@@ -22,8 +23,8 @@ public class JobRequest {
     @Column(name = "idJobRequest")
     private Long idJobRequest ;
 
-    private Number agency ;
-    private Number admin ;
+    private int agency ;
+    private int admin ;
     private Date date ;
     private String reason ;
     private Boolean deviceEligibility ;
