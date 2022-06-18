@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/job-request")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 @Slf4j
 public class JobRequestController {
 

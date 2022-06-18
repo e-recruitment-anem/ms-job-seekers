@@ -9,7 +9,7 @@ import erecruitmentanem.msjobseeker.services.ProfessionalExperiencesService;
 
 @RestController
 @RequestMapping("professional-experiences")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class ProfessionalExperiencesController {
     @Autowired
     ProfessionalExperiencesService professionalExperiencesService;

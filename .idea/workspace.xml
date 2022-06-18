@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9c088690-409e-48d5-840c-ebb165bd1583" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/DiplomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/DiplomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/DrivingLicencesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/DrivingLicencesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/EducationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/EducationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/EmployerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/EmployerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/JobRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/JobRequestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/JobSeekersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/JobSeekersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/ProfessionalExperiencesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/erecruitmentanem/msjobseeker/controllers/ProfessionalExperiencesController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +134,7 @@
       <workItem from="1655490512805" duration="7033000" />
       <workItem from="1655500833958" duration="3457000" />
       <workItem from="1655515414412" duration="8775000" />
-      <workItem from="1655547593414" duration="2454000" />
+      <workItem from="1655547593414" duration="3384000" />
     </task>
     <servers />
   </component>

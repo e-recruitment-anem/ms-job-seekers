@@ -9,7 +9,7 @@ import erecruitmentanem.msjobseeker.services.DrivingLicencesService;
 
 @RestController
 @RequestMapping("driving-licences")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class DrivingLicencesController{
 
     @Autowired
