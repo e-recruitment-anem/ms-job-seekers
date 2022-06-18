@@ -16,7 +16,7 @@ public class JobRequestSpecification {
                 predicates.add(criteriaBuilder.equal(root.get("agency"),request.getAgency()));
             }
             if (request.getAdmin() != 0) {
-                predicates.add(criteriaBuilder.equal(root.get("admin"), request.getDate()));
+                predicates.add(criteriaBuilder.equal(root.get("admin"), request.getAdmin()));
             }
             if (request.getDate() != null ) {
                 predicates.add(criteriaBuilder.equal(root.get("date"), request.getDate()));

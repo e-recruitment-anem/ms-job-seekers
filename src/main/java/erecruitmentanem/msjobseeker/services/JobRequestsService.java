@@ -33,7 +33,7 @@ public class JobRequestsService {
 
     public ResponseEntity<Object> createJobRequest(JobRequest body,Long idJobSeeker){
         try {
-            if(jobRequestRepository.existsById(idJobSeeker) == false){
+            if(jobSeekerRepository.existsById(idJobSeeker) == false){
                 return ExceptionsHandler.itemNotFoundException();
             }
             JobRequest jobRequest = new JobRequest();
@@ -47,12 +47,10 @@ public class JobRequestsService {
             jobRequest.setNightWork(body.getNightWork());
             jobRequest.setReason(body.getReason());
             jobRequest.setTraining(body.getTraining());
-            jobRequest.setJobSeeker(new JobSeeker());
             jobRequest.setJobSeeker(jobSeekerRepository.findById(idJobSeeker).get());
             jobRequestRepository.save(jobRequest);
             return ResponseHandler.generateResponse("job request created ", jobRequest);
         } catch (Exception e) {
-            //log.info(String.valueOf(e));
             System.out.println(e);
             return ExceptionsHandler.badRequestException();
         }
@@ -63,6 +61,20 @@ public class JobRequestsService {
         try{
             JobRequest jobRequest = (JobRequest) jobRequestRepository.findById(id).get();
             return ResponseHandler.generateResponse("job request found.", jobRequest);
+        }catch (Exception e) {
+            log.info(String.valueOf(e));
+            return ExceptionsHandler.badRequestException();
+        }
+    }
+
+    public ResponseEntity<Object> getJobRequestByJobSeekerId(Long id){
+        try{
+            if(jobSeekerRepository.existsById(id) == false){
+                return ExceptionsHandler.itemNotFoundException();
+            }
+            JobSeeker jobSeeker = jobSeekerRepository.findById(id).get();
+            List<JobRequest> jobRequestList = jobRequestRepository.findAllByJobSeeker(jobSeeker);
+            return ResponseHandler.generateResponse("job request List found.", jobRequestList);
         }catch (Exception e) {
             log.info(String.valueOf(e));
             return ExceptionsHandler.badRequestException();

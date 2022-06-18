@@ -11,6 +11,8 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
 import erecruitmentanem.msjobseeker.entities.JobRequest;
+import erecruitmentanem.msjobseeker.entities.JobSeeker;
+
 
 @RepositoryRestResource
 public interface JobRequestRepository
@@ -19,6 +21,8 @@ public interface JobRequestRepository
 
          Page<JobRequest> findAll(Specification<JobRequest> spec, Pageable pageable);
          List<JobRequest> findAll(Specification<JobRequest> spec);
-}
+         List<JobRequest> findAllByJobSeeker(JobSeeker jobSeeker);
+
+    }
 
 

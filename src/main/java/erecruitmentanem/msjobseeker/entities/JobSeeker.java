@@ -46,7 +46,7 @@ public class JobSeeker {
     private Number identityCardDelivryCity ;
     private String phoneNumber ;
     private String educationalLevel ;
-        private String qualificationLevel ;
+    private String qualificationLevel ;
     private String[] languages ;
     private Number[] skills ;
 
