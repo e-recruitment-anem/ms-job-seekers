@@ -21,7 +21,6 @@ import javax.persistence.*;
 public class JobSeeker {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idJobSeeker")
     private Long idJobSeeker ;
 
