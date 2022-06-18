@@ -12,7 +12,8 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/job-request") 
+@RequestMapping("/job-request")
+@CrossOrigin(origins = "http://localhost:3000")
 @Slf4j
 public class JobRequestController {
 
