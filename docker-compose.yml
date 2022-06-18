@@ -10,6 +10,15 @@ volumes:
     driver: local
 
 services:
+  zookeeper:
+    image: zookeeper:3.7.0
+    container_name: zookeeper
+    restart: "no"
+    networks:
+      - kafka-net
+    ports:
+      - "2181:2181"
+
   kafka:
     image: obsidiandynamics/kafka
     container_name: kafka

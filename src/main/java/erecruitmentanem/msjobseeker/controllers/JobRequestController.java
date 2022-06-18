@@ -12,7 +12,8 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/job-request") 
+@RequestMapping("/job-request")
+@CrossOrigin(origins = "*")
 @Slf4j
 public class JobRequestController {
 
@@ -27,6 +28,8 @@ public class JobRequestController {
         return jobRequestsService.createJobRequest(body,idJobSeeker);
     }
 
+
+
     @GetMapping("/{id}")
     ResponseEntity<Object> getJobRequestById(@PathVariable("id") Long id){
         if(jobRequestRepository.existsById(id) == false){
@@ -34,14 +37,15 @@ public class JobRequestController {
         }
         return jobRequestsService.getJobRequestById(id);
     }
-
+    @GetMapping("/b/{idJobSeeker}")
+    ResponseEntity<Object> getJobRequestByJobSeekerId(@PathVariable("idJobSeeker") Long id){
+        return jobRequestsService.getJobRequestByJobSeekerId(id);
+    }
 
     @GetMapping("/search")
     ResponseEntity<Object> getJobRequests(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "3") int size , @RequestBody JobRequest request){
         return jobRequestsService.getJobRequests(page, size, request);
     }
-
-    
 
 
     @PutMapping("{id}")

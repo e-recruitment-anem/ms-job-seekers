@@ -1,4 +1,4 @@
-FROM openjdk:11
+FROM openjdk:17-alpine
 
 COPY target/ms-job-seeker*.jar ms-job-seeker.jar
 
